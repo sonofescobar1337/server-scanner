@@ -1,0 +1,25 @@
+{
+  "name": "server-scanner",
+  "version": "1.0.0",
+  "description": "Server Scanner detect rootkit and backdoor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonofescobar1337/server-scanner.git"
+  },
+  "author": "sonofescobar1337",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sonofescobar1337/server-scanner/issues"
+  },
+  "homepage": "https://github.com/sonofescobar1337/server-scanner#readme",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "mime-types": "^2.1.35",
+    "path": "^0.12.7"
+  }
+}

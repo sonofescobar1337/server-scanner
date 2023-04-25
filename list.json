@@ -1,0 +1,38 @@
+[
+    {
+      "backdoorRegex": "(\\eval\\(|assert\\(|\\bcmd\\b|\\bpassthru\\b|\\bshell_exec\\b|\\bproc_open\\b|\\bpcntl_exec\\b|\\bpopen\\b|\\bsystem\\b|\\bexec\\b|\\getcwd\\b|\\GLOBALS\\b)"
+    },
+    {
+      "backdoorRegex": "\\${\\\"\\\\x47\\\\x4c\\\\x4f\\\\x42ALS\\\"}\\[\\\"i\\\\x6b\\\\x6epl\\\\x64\\\\x72\\\\x70\\\\x69\\\\x67\\\\x6f\\\"\\]="
+    },
+    {
+      "backdoorRegex": "$GLOBALS"
+    },
+    {
+      "backdoorRegex": "<?php ${"
+    },
+    {
+      "backdoorRegex": "echo\"<d\\x69v\\x20id\\x3d\\\"\\x63o\\x6e\\x74\\x65\\x6et\\x22\\x3e\\x3ctab\\x6c\\x65\\x20wid\\x74h=\\\"70\\x30\\\"\\x20bord\\x65\\x72\\x3d\\\"\\x30\\x22 cel\\x6c\\x70a\\x64\\x64i\\x6e\\x67=\\\"\\x33\\x22\\x20\\x63el\\x6cs\\x70\\x61\\x63\\x69ng\\x3d\\\"1\\\""
+    },
+    {
+      "backdoorRegex": "echo \"\\x3c\\x73\\x63\\x72i\\x70t\\x20s\\x72\\x63\\x3dh\\x74\\x74p://\\x770rms.c\\x6f\\x6d/k\\x61y\\x64\\x65t\\x2ep\\x68\\x70>\""
+    },
+    {
+      "backdoorRegex": "G\\x4cOBALS"
+    },
+    {
+      "backdoorRegex": "gconv_init"
+    },
+    {
+      "backdoorRegex": "GCONV_PATH"
+    },
+    {
+      "backdoorRegex": "fork@@GLIBC_2.2.5"
+    },
+    {
+      "backdoorRegex": "exploit"
+    },
+    {
+      "backdoorRegex": "__FRAME_END__"
+    }
+  ]
