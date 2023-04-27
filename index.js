@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootPath = 'YOUR PATH '; //EXAMPLE /var/www/html
+const rootPath = 'shell-backdoor-list';
 const configFile = 'list.json';
 
 fs.readFile(configFile, 'utf8', (err, data) => {
@@ -36,13 +36,14 @@ fs.readFile(configFile, 'utf8', (err, data) => {
                 console.error(err);
                 return;
               }
-
+              let colorCode = '\x1b[31m' ;
               let detected = false;
               config.forEach((backdoor) => {
                 if (new RegExp(backdoor.backdoorRegex).test(data)) {
                   detected = true;
+                  const color = '\x1b[32m';
                   const message = `Backdoor terdeteksi (${filePath})`;
-                  console.log(message);
+                  console.log(color + message);
 
                   fs.appendFile('log.txt', message + '\n', (err) => {
                     if (err) {
@@ -53,7 +54,8 @@ fs.readFile(configFile, 'utf8', (err, data) => {
               });
 
               if (!detected) {
-                console.log(`Tidak ada backdoor pada file ${filePath}`);
+                const color = '\x1b[31m' ;
+                console.log(color + `Tidak ada backdoor pada file ${filePath}`);
               }
             });
           } else if (path.extname(file) != '.php') {
@@ -67,8 +69,9 @@ fs.readFile(configFile, 'utf8', (err, data) => {
               config.forEach((backdoor) => {
                 if (new RegExp(backdoor.backdoorRegex).test(data)) {
                   detected = true;
+                  const color = '\x1b[32m';
                   const message = `Rootkit terdeteksi (${filePath})`;
-                  console.log(message);
+                  console.log(color + message);
 
                   fs.appendFile('log.txt', message + '\n', (err) => {
                     if (err) {
@@ -79,6 +82,7 @@ fs.readFile(configFile, 'utf8', (err, data) => {
               });
 
               if (!detected) {
+                const color = '\x1b[31m' ;
                 console.log(`Tidak ada backdoor pada file ${filePath}`);
               }
             });
