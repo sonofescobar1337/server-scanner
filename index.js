@@ -83,7 +83,7 @@ fs.readFile(configFile, 'utf8', (err, data) => {
 
               if (!detected) {
                 const color = '\x1b[31m' ;
-                console.log(`Tidak ada backdoor pada file ${filePath}`);
+                console.log(color + `Tidak ada backdoor pada file ${filePath}`);
               }
             });
           }
