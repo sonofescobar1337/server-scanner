@@ -9,6 +9,9 @@
       "backdoorRegex": "$GLOBALS"
     },
     {
+      "backdoorRegex": "ZlwBhrDSDRgGg"
+    },
+    {
       "backdoorRegex": "<?php ${"
     },
     {
