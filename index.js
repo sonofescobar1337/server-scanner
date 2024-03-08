@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const rootPath = 'shell-backdoor-list';
-const configFile = 'list.json';
+const rootPath = 'shell-backdoor-list'; // your path "EX ../var/www/html/web1/dir1"
+const configFile = 'list.json'; //config file
 
 fs.readFile(configFile, 'utf8', (err, data) => {
   if (err) {
@@ -70,7 +70,7 @@ fs.readFile(configFile, 'utf8', (err, data) => {
                 if (new RegExp(backdoor.backdoorRegex).test(data)) {
                   detected = true;
                   const color = '\x1b[32m';
-                  const message = `Rootkit terdeteksi (${filePath})`;
+                  const message = `Localroot terdeteksi (${filePath})`;
                   console.log(color + message);
 
                   fs.appendFile('log.txt', message + '\n', (err) => {
