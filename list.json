@@ -37,5 +37,8 @@
     },
     {
       "backdoorRegex": "__FRAME_END__"
+    },
+    {
+      "backdoorRegex": "sched_setaffinity"
     }
   ]
